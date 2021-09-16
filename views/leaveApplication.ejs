@@ -1,0 +1,17 @@
+<%- include("partials/header1"); -%>
+    <form class="submission-form" action="/leaveApplication" method="post">
+      <div>
+          <label>Leave Start Date</label>
+          <input type="date" name="startDate">
+        </div>
+        <div>
+          <label>Leave End Date</label>
+          <input type="date" name="endDate">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Reson for leave</label>
+          <input type="text" class="form-control" id="exampleFormControlTextarea1" name="reason">
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit" name="button">Submit</button>
+    </form>
+<%- include("partials/footer"); -%>

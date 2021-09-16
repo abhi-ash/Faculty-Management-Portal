@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Faculty Register</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+<main class="form-signin">
+    <img class="mb-4" src="img/Faculty.png" alt="" width="200" height="150">
+    <h1 class="h3 mb-3 fw-normal">Please Register</h1>
+    <form class="form-floating" action="/register" method="post">
+      <input type="text" class="form-control" id="floatingInput" name="firstName" placeholder="First Name">
+      <input type="text" class="form-control" id="floatingInput" name="lastName" placeholder="Last Name">
+      <div>
+        <select class="form-control" id="exampleFormControlSelect1" type="text" name="department">
+          <option>CSE</option>
+          <option>EE</option>
+          <option>ME</option>
+        </select>
+        </div>
+      <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+    <button class="w-100 btn btn-lg btn-primary" type="submit" name="button">Register</button>
+    </form>
+</main>    
+</body>
+</html>

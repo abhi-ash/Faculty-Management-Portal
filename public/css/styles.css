@@ -1,0 +1,105 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+.submission-form{
+  max-width: 500px;
+  margin: 2rem auto;
+  border: 2px solid #009879;
+  padding: 2rem;
+}
+label{
+    display: block;
+    padding: 1rem 0 0.5rem;
+}
+input,textarea{
+  display: block;
+  width: 100%;
+  border: 2px solid #009879;
+  padding: 0.5rem;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+h2.headertekst {
+  text-align: center;
+}
+
+table.center {
+  margin-left:auto; 
+  margin-right:auto;
+}
+.content-table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+.footer-padding {
+	padding-bottom: 60px;
+}
+
+.footer {
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #1abc9c;
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 12px;
+  color: #fff;
+}

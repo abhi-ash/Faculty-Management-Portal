@@ -1,0 +1,84 @@
+<%- include("partials/header1"); -%>
+    <h2 class="headertekst">Total Number of Leaves Left : <%= leavesLeft %></h2>
+    <table class="content-table center">
+    <thead>
+        <h2 class="headertekst">Past Leave Applications </h2>    
+        <tr>
+            <th>Leave Id</th>
+            <th>Leave Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Status</th>
+            <th>Leave Reason</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% leaves.forEach(function(leave){ %>
+            <tr>
+                <td><%= leave.leave_id %> </td>
+                <td> <%= leave.leave_type %> </td>
+                <td><%= leave.start_date %> </td>
+                <td> <%= leave.end_date %> </td>
+                <td><%= leave.status %> </td>
+                <td> <%= leave.application %> </td>
+            </tr>
+            <% }) %>
+    </tbody>
+    </table>
+
+    <% if(currentLeaveStatus!=='Accepted'){ %>
+    <h2 class="headertekst"> Ongoing Leave Application </h2>
+    <table class="content-table center">
+    <thead>
+        <tr>
+            <th>Leave Id</th>
+            <th>Leave Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Status</th>
+            <th>Leave Reason</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td><%= ongoingLeave[0].leave_id %> </td>
+                <td> <%= ongoingLeave[0].leave_type %> </td>
+                <td><%= ongoingLeave[0].start_date %> </td>
+                <td> <%= ongoingLeave[0].end_date %> </td>
+                <td><%= currentLeaveStatus %> </td>
+                <td><%=ongoingLeave[0].application %></td>
+        </tr>
+    </tbody>
+    </table>
+    <h2 class="headertekst">Comments on Ongoing Leave Applications </h2>
+    <table class="content-table center">
+    <thead>   
+        <tr>
+            <th>Comment</th>
+            <th>Comment By</th>
+            <th>Comment Time</th>
+            <th>Position</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <% comments.forEach(function(cmnt){ %>
+            <tr>
+                <td><%= cmnt.comment %> </td>
+                <td> <%= cmnt.comment_by %> </td>
+                <td><%= cmnt.comment_time %> </td>
+                <td><%= cmnt.role %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+    </table>
+    <% } %>
+    <% if( pendingLvSts ==='Hold'){ %>
+    <form class="submission-form" action="/myApplication" method="post">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Comment</label>
+            <input type="text" name="comment" placeholder="Reply Back">
+            <button class="w-100 btn btn-lg btn-primary" type="submit" name="button">Submit</button>
+        </div>
+    </form> 
+    <% } %>   
+<%- include("partials/footer"); -%>

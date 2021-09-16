@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Faculty Leave Portal</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <p class="navbar-brand"><a href="/back">Faculty Leave Portal</a></p>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li id="info"><a href="/info">Info</a></li>
+          <li id="leaveApplication"><a href="/leaveApplication">Leave Application</a></li>
+          <li id="myApplication"><a href="/myApplication">My Applications</a></li>
+          <li id="me"><a href="/me">Me</a></li>
+          <li id="logout"><a href="/home">Log Out</a></li>
+        </ul>
+    </div>
+  </nav>
+    <h2>Position : <%= position %></h2>
+    <h2> Name : <%= employeeName %></h2>
+    <h3>Leave Status:<%= pendingLeaveSts %></h3>
+  <footer>
+    <div class="footer-padding">
+    <div class="footer">
+      <p>Made by Abhishek & Riddam</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+  

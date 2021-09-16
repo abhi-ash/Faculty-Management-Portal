@@ -1,0 +1,100 @@
+<%- include("partials/header1"); -%>
+<% if(countPastDFA!=='0'){%>
+<h2 class="headertekst">Past Dean Faculty Affairs</h2>
+<table class="content-table center">
+  <thead>   
+      <tr>
+          <th>Employee Id</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+      </tr>
+  </thead>
+  <tbody>
+      <% pastDFA.forEach(function(pastD){ %>
+          <tr>
+              <td><%= pastD.employee_id %> </td>
+              <td> <%= pastD.start_date %> </td>
+              <td><%= pastD.end_date %> </td>
+          </tr>
+          <% }) %>
+  </tbody>
+  </table>
+  <% } %>
+  <% if(countPresentDFA!=='0'){ %>
+  <h2 class="headertekst">Present Dean Faculty Affairs</h2>
+<table class="content-table center">
+  <thead>   
+      <tr>
+          <th>Employee Id</th>
+          <th>Appointed Date</th>
+      </tr>
+  </thead>
+  <tbody>
+      <% presentDFA.forEach(function(presentD){ %>
+          <tr>
+              <td><%= presentD.employee_id %> </td>
+              <td> <%= presentD.appointed_date %> </td>
+          </tr>
+          <% }) %>
+  </tbody>
+  </table>
+  <% } %>
+  <% if(countPastHOD!=='0'){%>
+  <h2 class="headertekst">Past Head of Department</h2>
+  <table class="content-table center">
+    <thead>   
+        <tr>
+            <th>Employee Id</th>
+            <th>Department Id</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% pastHOD.forEach(function(pastH){ %>
+            <tr>
+                <td><%= pastH.hod_id %> </td>
+                <td><%= pastH.department_id %></td>
+                <td> <%= pastH.start_date %> </td>
+                <td><%= pastH.end_date %> </td>
+            </tr>
+            <% }) %>
+    </tbody>
+    </table>
+  <% } %>
+<%  if(countPresentHOD!=='0'){%>  
+<h2 class="headertekst">Present Head of Department</h2>
+  <table class="content-table center">
+    <thead>   
+        <tr>
+            <th>Employee Id</th>
+            <th>Department Id</th>
+            <th>Appointed Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% presentHOD.forEach(function(presentH){ %>
+            <tr>
+                <td><%= presentH.hod_id %> </td>
+                <td><%= presentH.department_id %> </td>
+                <td> <%= presentH.appointed_date %> </td>
+            </tr>
+            <% }) %>
+    </tbody>
+    </table>
+<%}%>
+<form class="submission-form" action=/appoint method="post">
+    <div>
+      <label for="inputEmail4">Email Id</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="Email Id" name="emailId">
+    </div>
+  <div>
+    <label for="exampleFormControlSelect1">Employee Position</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="pos">
+      <option>HOD</option>
+      <option>DFA</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<%- include("partials/footer"); -%>
